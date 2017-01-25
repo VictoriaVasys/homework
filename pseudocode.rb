@@ -12,7 +12,6 @@
 # 2. Odds & Evens: solved when the program outputs 2 files, one with odds, the other with evens, and no duplicates included; I want to iterate thru the original file and direct odds to one file & evens to another; during the iteration, if a number already exists in its destination file, skip the number
 #  3. Lats & Longs: solved when the program outputs the location closest to the north pole; need to iterate through the latitude values (1st in each array? or key if it's a hash) and find the greatest value; if looking for location closest to magnetic north pole, need to identify its lat/lon, I'm not sure how to find closest to both lat & lon...
 
-word 
 
 ## Bad Connections Homework
 ## 1. We will know the problem is solved when the program responds correctly; at the end, the user inputs "GOODBYE!" twice and the program exits after putting "THANK YOU FOR CALLING!" to the screen
@@ -29,6 +28,6 @@ word
 #   2.1 if the user only enters the `return` key, output "HELLO?!"
 #   2.2 if the user enters a question with any lower-case letters, output "I AM HAVING A HARD TIME HEARING YOU."
 #   2.3 if the above is false (input is all-caps), output "NO, THIS IS NOT A PET STORE"
-#   2.4 if the user enters "GOODBYE!", output "ANYTHING ELSE I CAN HELP WITH?"
+#   2.4 if the user enters "GOODBYE!", output "ANYTHING ELSE I CAN HELP WITH?" --> this actually has to go before the all-caps arg because GOODBYE is all-caps (the if loop would end after evaluating that)
 #   2.5 if the user enters "GOODBYE!" again, output "THANK YOU FOR CALLING!"
 # 3. exit the program by setting ready_to_quit = true
