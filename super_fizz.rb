@@ -1,19 +1,25 @@
 
-array = Array (0..1000)
+array = Array (19..21)
 
 array.each do |num|
-  if num % 7 == 0 && num % 5 == 0 && num % 3 == 0
-    puts "SuperFizzBuzz"
-  elsif num % 7 == 0 && num % 5 == 0
-    puts "SuperBuzz"
-  elsif num % 7 == 0 && num % 3 == 0
-    puts "SuperFizz"
-  elsif num % 5 == 0 && num % 3 == 0
-    puts "FizzBuzz"
-  elsif num % 7 == 0
-    puts "Super"
+  if num % 7 == 0
+    if num % 5 == 0
+      if num % 3 == 0
+        puts "SuperFizzBuzz"
+      else
+        puts "SuperBuzz"
+      end
+    elsif num % 3 == 0
+      puts "SuperFizz"
+    else
+      puts "Super"
+    end
   elsif num % 5 == 0
-    puts "Buzz"
+    if num % 3 == 0
+      puts "FizzBuzz"
+    else 
+      puts "Buzz"
+    end
   elsif num % 3 == 0
     puts "Fizz"
   else
