@@ -6,12 +6,12 @@ class Calculator
     @total = 0
   end
 
-  def add(arg)
-    @total += arg
+  def add(*args)
+    @total += args.reduce(:+)
   end
 
-  def subtract(arg)
-    @total -= arg
+  def subtract(*args)
+    @total -= args.reduce(:+)
   end
 
   def clear

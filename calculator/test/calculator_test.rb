@@ -13,9 +13,13 @@ class CalculatorTest < Minitest::Test
     assert calc
   end
   
-  def test_it_can_add
+  def test_it_can_add_2_numbers
     calc.add(3)
     assert_equal 5, calc.add(2)
+  end
+
+  def test_it_can_add_many_args
+    assert_equal 39, calc.add(3, 4, 23, 7, 2)
   end
 
   def test_it_can_subtract
@@ -23,14 +27,17 @@ class CalculatorTest < Minitest::Test
     assert_equal 3, calc.subtract(2)
   end
 
+  def test_it_can_subtract_many_args
+    assert_equal (-44), calc.subtract(1, 2, 34, 7)
+  end
 
   def test_it_can_total
     # test that the sums and differences are added to memory and those numbers are summed together
-    calc.add(2)
+    calc.add(2, 3, 38)
     calc.add(3)
-    calc.add(58)
-    calc.subtract(30)
-    assert_equal 33, calc.total
+    calc.subtract(20, 2)
+    calc.subtract(4)
+    assert_equal 20, calc.total
   end
 
 
